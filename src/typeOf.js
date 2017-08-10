@@ -3,7 +3,7 @@ function typeOf(element) {
     const match = /\[.*\s(.*)\]/ig.exec(type);
 
     if (match && match[1]) {
-        type = match[1];
+        return match[1].toLowerCase();
     }
 
     return type.toLowerCase();
