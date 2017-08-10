@@ -51,8 +51,15 @@ export function htmlToDocument(html) {
     return (new DOMParser).parseFromString(html, "text/html");
 }
 
+export function htmlToContent(html) {
+    const template = document.createElement("template");
+    template.innerHTML = html;
+    return template.content;
+}
+
 export default {
     closest,
+    htmlToContent,
     htmlToDocument,
     insertAdjacentElement,
     insertAdjacentText
