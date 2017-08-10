@@ -47,8 +47,13 @@ export function insertAdjacentText(target, where, text) {
     insertAdjacentElement.call(target, where, textNode);
 }
 
+export function htmlToDocument(html) {
+    return (new DOMParser).parseFromString(html, "text/html");
+}
+
 export default {
     closest,
+    htmlToDocument,
     insertAdjacentElement,
     insertAdjacentText
 };
